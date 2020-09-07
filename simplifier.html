@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Simplifier</title>
+    <link href="simplifier.css?v=7" type="text/css" rel="stylesheet" >
+</head>
+<body>
+    <div id="container">
+        <div class="simplifier" id="simplifier">
+            <div class="simplifier__guitar">
+                <div class="simplifier__guitar--on" id="simplifier__guitar--on"></div>
+
+                <div class="knob knob__poweramp"><input type="text" class="rotarySwitch" value="0"></div>
+                <div class="knob knob__volume"><input type="text" class="rotarySwitch" value="0"></div>
+                <div class="knob knob__gain"><input type="text" class="rotarySwitch" value="0"></div>
+                <div class="knob knob__micleft"><input type="text" class="rotarySwitch" value="0"></div>
+                <div class="knob knob__micright"><input type="text" class="rotarySwitch" value="0"></div>
+                <div class="knob knob__presence"><input type="text" class="rotarySwitch" value="0"></div>
+
+                <div class="knob knob__treble"><input type="text" class="rotaryMiniSwitch" value="0"></div>
+                <div class="knob knob__mid"><input type="text" class="rotaryMiniSwitch" value="0"></div>
+                <div class="knob knob__bass"><input type="text" class="rotaryMiniSwitch" value="0"></div>
+
+                <div class="toggle toggleH" id="toogle__style"></div>
+                <div class="toggle toggleV" id="toogle__cabl"></div>
+                <div class="toggle toggleV" id="toogle__cabr"></div>
+                <div class="toggle toggleH" id="toogle__resonance"></div>
+            </div>
+
+        </div>
+        <button id="btnCapturar">Guardar imagen de mi configuración</button>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/knob.js"></script>  
+    <script>
+        $(function() {
+          $('.rotarySwitch').rotaryswitch({
+            themeClass: 'big',
+            beginDeg: 210,
+            lengthDeg: 300,
+            minimum: 0,
+            maximum: 300,
+          });
+        });
+
+        $(function() {
+          $('.rotaryMiniSwitch').rotaryswitch({
+            themeClass: 'mini',
+            beginDeg: 210,
+            lengthDeg: 300,
+            minimum: 0,
+            maximum: 300,
+          });
+        });
+
+    </script>
+        <script type="text/javascript" src="js/simplifier.js?v=5"></script>
+        <script type="text/javascript" src="js/html2canvas.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+html, body, #container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+}
+
+/* * ********* REDIMENSIONES **************** */
+
+@media only screen and (min-width: 1550px)  { :root { --factor: 1.00; } }
+@media only screen and (max-width: 1550px)  { :root { --factor: 0.90; } }
+@media only screen and (max-width: 1400px)  { :root { --factor: 0.80; } }
+@media only screen and (max-width: 1300px)  { :root { --factor: 0.77; } }
+@media only screen and (max-width: 1200px)  { :root { --factor: 0.70; } }
+@media only screen and (max-width: 1100px)  { :root { --factor: 0.62; } }
+@media only screen and (max-width: 1000px)  { :root { --factor: 0.57; } }
+@media only screen and (max-width: 900px)   { :root { --factor: 0.52; } }
+@media only screen and (max-width: 800px)   { :root { --factor: 0.48; } }
+@media only screen and (max-width: 750px)   { :root { --factor: 0.45; } }
+@media only screen and (max-width: 700px)   { :root { --factor: 0.41; } }
+@media only screen and (max-width: 650px)   { :root { --factor: 0.38; } }
+@media only screen and (max-width: 600px)   { :root { --factor: 0.35; } }
+@media only screen and (max-width: 550px)   { :root { --factor: 0.32; } }
+@media only screen and (max-width: 500px)   { :root { --factor: 0.29; } }
+@media only screen and (max-width: 450px)   { :root { --factor: 0.26; } }
+@media only screen and (max-width: 400px)   { :root { --factor: 0.23; } }
+@media only screen and (max-width: 300px)   { :root { --factor: 0.15; } }
+
+#container { 
+    margin: 0 auto;
+   
+    background-size: cover;
+}
+
+.simplifier {
+    width: 100%;
+    height: 100%;
+    max-width: calc(1500px * var(--factor));
+    max-height: calc(981px * var(--factor));
+    padding: calc(50px * var(--factor));
+    margin: 0 auto;
+    position: relative;
+}
+
+.simplifier__guitar {
+    background: url(assets/simplifier-circuits-off.png);
+    background-size: cover;
+    transition: background ease-in-out 1s;
+    width: 100%;
+    height: 100%;
+}
+
+.simplifier__guitar--on {
+    position: relative;
+    width: calc(110px * var(--factor));
+    height: calc(110px * var(--factor));
+    background: url(assets/simplifier-circuits-on.png);
+    background-size: cover;
+    transition: background ease-in-out 0.5s;
+    top: calc(62px * var(--factor));
+    left: calc(743px * var(--factor));
+    opacity: 0;
+}
+
+.knob {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.knob__poweramp {
+    top: calc(250px * var(--factor));
+    left: calc(679px * var(--factor));
+}
+
+.knob__volume {
+    top: calc(250px * var(--factor));
+    left: calc(933px * var(--factor));
+}
+
+.knob__gain {
+    top: calc(250px * var(--factor));
+    left: calc(1291px * var(--factor));
+}
+
+.knob__micleft {
+    top: calc(436px * var(--factor));
+    left: calc(149px * var(--factor));
+}
+
+.knob__micright {
+    top: calc(436px * var(--factor));
+    left: calc(446px * var(--factor));
+}
+
+.knob__presence {
+    top: calc(496px * var(--factor));
+    left: calc(678px * var(--factor));
+}
+
+.knob__treble {
+  top: calc(598px * var(--factor));
+  left: calc(982px * var(--factor));
+}
+
+.knob__mid {
+  top: calc(598px * var(--factor));
+  left: calc(1160px * var(--factor));
+}
+
+.knob__bass {
+  top: calc(598px * var(--factor));
+  left: calc(1332px * var(--factor));
+}
+
+
+/* * ********* KNOB **************** */
+
+  
+  .rotaryswitchPlugin .switch {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* NORMAL */
+  
+  .rotaryswitchPlugin.big {
+    width: calc(172px * var(--factor));
+    height: calc(172px * var(--factor));
+    background: url(assets/darkBigBackground@2x.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .rotaryswitchPlugin.big .switch { 
+    background: url(assets/darkBigFront@2x.png) no-repeat; 
+    background-size: 100% 100%; 
+  }
+  
+  /* MINI */
+
+  .rotaryswitchPlugin.mini {
+    width: calc(81px * var(--factor));
+    height: calc(81px * var(--factor));
+    background: url(assets/darkSmallBackground@2x.png) no-repeat;
+    background-size: 100% 100%;
+  }
+    
+  .rotaryswitchPlugin.mini .switch { 
+    background: url(assets/darkSmallFront@2x.png) no-repeat; 
+    background-size: 100% 100%; 
+  } 
+
+
+
+/* * ********* SWITCH **************** */
+
+.toggle {
+  width: calc(90px * var(--factor));
+  height: calc(90px * var(--factor));
+  background: url('assets/switchCenter.png') no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+.toggle .clicker {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.toggleH .clicker {
+  flex-direction: row;
+}
+
+.toggleV .clicker {
+  flex-direction: column;
+}
+
+.toggleH .pos  {
+  display: flex;
+  width: 33.33%;
+}
+
+.toggleV .pos  {
+  display: flex;
+  height: 33.33%;
+}
+
+#toogle__style {
+  top: calc(340px * var(--factor));
+  left: calc(1151px * var(--factor));
+}
+
+#toogle__cabl {
+  top: calc(712px * var(--factor));
+  left: calc(199px * var(--factor));
+}
+
+#toogle__cabr {
+  top: calc(712px * var(--factor));
+  left: calc(428px * var(--factor));
+}
+
+#toogle__resonance {
+  top: calc(721px * var(--factor));
+  left: calc(722px * var(--factor));
+}
+
+
